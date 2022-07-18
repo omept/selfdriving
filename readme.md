@@ -1,4 +1,4 @@
-You will learn:
+Key take aways from the course:
 
 1) Car physics
    1) car movement with keybpard
@@ -12,3 +12,5 @@ You will learn:
 5) Basic Neural Network
 6) Basic Genetic Algorithms
 7) Modern javascript techniques
+
+Link : https://www.youtube.com/watch?v=Rs_rAxEsAvI&t=1502s
