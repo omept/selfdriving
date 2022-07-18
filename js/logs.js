@@ -3,6 +3,6 @@ class Logs {
     }
 
     write(m) {
-        // console.table(m)
+        console.table(m)
     }
 }

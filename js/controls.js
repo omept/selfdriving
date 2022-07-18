@@ -24,7 +24,7 @@ class Controls {
                     this.reverse = true;
                     break;
             }
-            this.logs.write(this)
+            // this.logs.write(this)
         }
         document.onkeyup = (event) => {
             switch (event.key) {

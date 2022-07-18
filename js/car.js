@@ -8,13 +8,15 @@ class Car {
         this.speed = 0;
         this.acceleration = 0.2;
 
-        this.maxSpeed = 3;
+        this.maxSpeed = 5;
         this.friction = 0.05;
 
         this.angle = 0;
 
         this.controls = new Controls();
         this.logs = new Logs();
+
+        this.sensor = new Sensor(this);
     }
 
     draw(ctx) {
@@ -30,6 +32,8 @@ class Car {
         );
         ctx.fill();
         ctx.restore();
+
+        this.sensor.draw(ctx);
     }
 
     #movement() {
@@ -72,10 +76,11 @@ class Car {
         this.x -= Math.sin(this.angle) * this.speed;
         this.y -= Math.cos(this.angle) * this.speed;
 
-        this.logs.write(this)
+        // this.logs.write(this)
     }
 
-    update() {
+    update(roadBorders) {
         this.#movement();
+        this.sensor.update(roadBorders);
     }
 }
